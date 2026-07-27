@@ -217,7 +217,7 @@ function addClickAnimation() {
   // Add card click effect
   document
     .querySelectorAll(
-      ".education-card, .project-card, .achievement-card, .contact-card"
+      ".education-card, .project-card, .achievement-card, .contact-card, .skills-card"
     )
     .forEach((card) => {
       card.classList.add("card-click-effect");
