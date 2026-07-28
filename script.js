@@ -280,6 +280,26 @@ function animateOnScroll() {
             }, index * 200);
           });
         }
+
+        // Stagger project cards
+        if (entry.target.classList.contains("projects")) {
+          const projectCards = entry.target.querySelectorAll(".project-card");
+          projectCards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add("visible");
+            }, index * 150);
+          });
+        }
+
+        // Stagger achievement/internship cards
+        if (entry.target.classList.contains("achievements")) {
+          const achievementCards = entry.target.querySelectorAll(".achievement-card");
+          achievementCards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add("visible");
+            }, index * 150);
+          });
+        }
       }
     });
   }, observerOptions);

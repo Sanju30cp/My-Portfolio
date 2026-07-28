@@ -605,12 +605,20 @@ section.visible {
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card.visible:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-image {
@@ -699,14 +707,21 @@ section.visible {
   border-radius: var(--border-radius);
   text-align: center;
   box-shadow: var(--shadow);
-  transform: perspective(1000px) rotateX(0deg) scale(1);
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  opacity: 0;
+  transform: perspective(1000px) translateY(30px) rotateX(0deg) scale(1);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.6s ease;
   transform-style: preserve-3d;
 }
 
-.achievement-card:hover {
-  transform: perspective(1000px) rotateX(5deg) rotateY(10deg) scale(1.02);
+.achievement-card.visible {
+  opacity: 1;
+  transform: perspective(1000px) translateY(0) rotateX(0deg) scale(1);
+}
+
+.achievement-card.visible:hover {
+  transform: perspective(1000px) translateY(0) rotateX(5deg) rotateY(10deg) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .achievement-icon {
@@ -716,8 +731,22 @@ section.visible {
   transition: transform 0.3s ease;
 }
 
-.achievement-card:hover .achievement-icon {
+.achievement-card.visible:hover .achievement-icon {
   transform: rotate(360deg);
+}
+
+/* Certificate Link Micro-animations */
+.btn-certificate .cert-icon {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-certificate:hover .cert-icon {
+  transform: translate(2.5px, -2.5px);
+}
+
+.achievement-card:hover .cert-preview-img {
+  transform: scale(1.08);
 }
 
 /* Contact Section */
