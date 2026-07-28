@@ -44,12 +44,13 @@ My-Portfolio/
 ├── styles.css          # Vanilla CSS tokens, themes, layout grids & animations
 ├── script.js          # Core JS logic, theme handling, statistics and transitions
 │
-├── my pic.png          # Hero section profile photo
-├── aquaculture_aid.png # Aquaculture Aid project illustration card
-├── netflix.png         # Netflix clone project preview card
-├── portfolio.png       # Portfolio preview card
-├── tech.png           # Technical section decoration image
-└── connect.png         # Contact section decoration image
+└── images/             # All project images and assets
+    ├── my pic.png          # Hero section profile photo
+    ├── aquaculture_aid.png # Aquaculture Aid project illustration card
+    ├── netflix.png         # Netflix clone project preview card
+    ├── portfolio.png       # Portfolio preview card
+    ├── tech.png           # Technical section decoration image
+    └── connect.png         # Contact section decoration image
 ```
 
 ---
